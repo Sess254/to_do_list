@@ -1,0 +1,16 @@
+:root {
+    --background: #101114;
+    --clr-primary: #1c1d20;
+    --clr-secondary: #4a4d57;
+    --clr-accent: #00ffc4;
+    --clr-text: #f9f9f9;
+}
+
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
