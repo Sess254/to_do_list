@@ -1,6 +1,5 @@
 :root {
-    --background: #101114;
-    --clr-primary: #1c1d20;
+    --clr-primary: #0f0f0f;
     --clr-secondary: #4a4d57;
     --clr-accent: #00ffc4;
     --clr-text: #f9f9f9;
@@ -10,10 +9,96 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: inherit;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Work Sans", serif;
+    background-color: var(--clr-primary);
+    font-size: 1.2rem;
+    color: var(--clr-text);
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+main {
+    display: grid;
+    grid:
+    "header header header header" auto
+    "...... lists  active ......" auto /
+    1fr minmax(100px, 300px) minmax(250px, 500px) 1fr
+}
+
+form {
+    display: flex;
+}
+
+.btn {
+    cursor: pointer;
+    background: 0;
+    color: inherit;
+    border: 0;
+}
+
+.btn.create {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-right: .25em;
+    transition: opacity 250ms ease-in;
+}
+
+.btn.create:hover {
+    opacity: 0.7;
+} 
+
+.title {
+    grid-area: header;
+    text-align: center;
+    font-size: calc(7vw + 2rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--clr-accent);
+    margin: -.2em 0 .3em;
+}
+
+.all-tasks {
+    grid-area: lists;
+}
+
+.task-list {
+    font-size: 1.2rem;
+    list-style: circle;
+}
+
+.active-list {
+    font-weight: 700;
+}
+
+.todo-list {
+    grid-area: active;
+}
+
+.new {
+    background: transparent;
+    font-size: inherit;
+    border: 0;
+    color: var(--clr-text);
+    border-bottom: 1px solid currentColor;
+    outline: none;
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+}
+
+.new:hover {
+    border-bottom-width: 3px;
+}
+
+.new:hover::placeholder {
+    opacity: 0.6;
+}
+
+.new.project {
+    font-size: 1.1rem;
 }

@@ -9,14 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 class="title">TODO APP</h1>
-    </header>
     <main>
+        <h1 class="title">ToDo App</h1>
+
         <div class="all-tasks">
             <h2 class="task-list-title">My Projects</h2>
-            <ul class="tasks-list">
-                <li class="active-list">My Projects</li>
+            <ul class="task-list">
+                <li class="active-list">YouTube</li>
                 <li>Work</li>
                 <li>Groceries</li>
             </ul>
@@ -24,68 +23,64 @@
             <form action="">
                 <input 
                     type="text"
-                    class="new-list"
+                    class="new project"
                     placeholder="new project name"
-                    aria-lable = "new project name"
+                    aria-label="new project name"
                 >
-                <button class="btn project" arai-label="create new project">+</button>
+                <button class="btn create" aria-label="create new project">+</button>
             </form>
         </div>
 
         <div class="todo-list">
+
             <div class="todo-header">
-                <h2 class="list-title">YouTube</h2>
+                <h2 class="list-title">
+                    YouTube
+                </h2>
                 <p class="task-count">3 tasks remaining</p>
             </div>
+
+            <div class="todo-body">
+
+                <div class="tasks">
+                    <div class="task">
+                        <input type="checkbox"  id="task1">
+                        <span class="custom-checkbox"></span>
+                        <label for="task1">record an album</label>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox"  id="task2">
+                        <span class="custom-checkbox"></span>
+                        <label for="task2">diss drake</label>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox"  id="task3">
+                        <span class="custom-checkbox"></span>
+                        <label for="task3">release album</label>
+                    </div>
+                </div>
+
+                <div class="new-task-creator">
+                    <form action="">
+                        <input 
+                            type="text"
+                            class="new task"
+                            placeholder="new task name"
+                            aria-label="new task name"
+                        >
+                        <button class="btn create" aria-label="create new task">+</button>
+                    </form>
+                </div>
+                <div class="delete-stuff">
+                    <button class="btn delete">Clear completed tasks</button>
+                    <button class="btn delete">Delete Project</button>
+                </div>
+            </div>
         </div>
 
-        <div class="todo-body">
-            <div class="tasks">
-                <div class="task">
-                    <input 
-                        type="checkbox" 
-                        id="task1">
-                    <label for="task1">
-                        <span class="custom-checkbox"></span>
-                        Record todo list video
-                    </label>
-                </div>
-                <div class="task">
-                    <input 
-                        type="checkbox" 
-                        id="task2">
-                    <label for="task2">
-                        <span class="custom-checkbox"></span>
-                        second task
-                    </label>
-                </div>
-                <div class="task">
-                    <input 
-                        type="checkbox" 
-                        id="task3">
-                    <label for="task3">
-                        <span class="custom-checkbox"></span>
-                        a third task
-                    </label>
-                </div>
-            </div>
-            <div class="new-task-creator">
-                <form action="">
-                    <input 
-                        type="text"
-                        class="new-list"
-                        placeholder="new task name"
-                        aria-lable = "new task name"
-                    >
-                    <button class="btn task" arai-label="create new task">+</button>
-                </form>
-            </div>
-            <div class="delete-stuff">
-               <button class="btn delete">clear complete tasks</button> 
-               <button class="btn delete">Delete project</button>
-            </div>
-        </div>
     </main>
-
+    
 </body>
 </html>
