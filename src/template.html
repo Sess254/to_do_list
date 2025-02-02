@@ -32,18 +32,17 @@
             </form>
         </div>
 
-        <div class="todo-list">
+        <div class="todo-list" data-project-display-container>
 
             <div class="todo-header">
-                <h2 class="list-title">
-                    YouTube
+                <h2 class="list-title" data-project-title>
                 </h2>
-                <p class="task-count">3 tasks remaining</p>
+                <p class="task-count" data-project-count></p>
             </div>
 
             <div class="todo-body">
 
-                <div class="tasks">
+                <div class="tasks" data-tasks>
                     <div class="task">
                         <input type="checkbox"  id="task1">
                         
@@ -74,10 +73,11 @@
                 </div>
 
                 <div class="new-task-creator">
-                    <form action="">
+                    <form action="" data-new-task-form>
                         <input 
                             type="text"
                             class="new task"
+                            data-new-task-input
                             placeholder="new task name"
                             aria-label="new task name"
                         >
@@ -85,13 +85,23 @@
                     </form>
                 </div>
                 <div class="delete-stuff">
-                    <button class="btn delete">Clear completed tasks</button>
-                    <button class="btn delete">Delete Project</button>
+                    <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+                    <button class="btn delete" data-delete-project-button>Delete Project</button>
                 </div>
             </div>
         </div>
 
     </main>
+    <template id="task-template">
+        <div class="task" >
+            <input type="checkbox">    
+            <label >
+                <span class="custom-checkbox">
+                </span>
+            </label>
+        </div>
+
+    </template>
     
 </body>
 </html>
