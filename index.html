@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script defer src="main.js"></script></head>
+<body>
+    <main>
+        <h1 class="title">ToDo App</h1>
+
+        <div class="all-tasks">
+            <h2 class="task-list-title">My Projects</h2>
+            <ul class="task-list" data-projects>
+                <li class="list-name active-list">YouTube</li>
+                <li class="list-name">Work</li>
+                <li class="list-name">Groceries</li>
+            </ul>
+
+            <form action="" data-new-project-form>
+                <input 
+                    type="text"
+                    class="new project"
+                    data-new-project-input
+                    placeholder="new project name"
+                    aria-label="new project name"
+                >
+                <button class="btn create" aria-label="create new project">+</button>
+            </form>
+        </div>
+
+        <div class="todo-list" data-project-display-container>
+
+            <div class="todo-header">
+                <h2 class="list-title" data-project-title>
+                </h2>
+                <p class="task-count" data-project-count></p>
+            </div>
+
+            <div class="todo-body">
+
+                <div class="tasks" data-tasks>
+                    <div class="task">
+                        <input type="checkbox"  id="task1">
+                        
+                        <label for="task1">
+                            <span class="custom-checkbox">
+                            </span>
+                            record an album
+                        </label>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox"  id="task2">
+                        <label for="task2">
+                            <span class="custom-checkbox">
+                            </span>
+                            diss drake
+                        </label>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox"  id="task3">
+                        <label for="task3">
+                            <span class="custom-checkbox">
+                            </span>
+                            release album
+                        </label>
+                    </div>
+                </div>
+
+                <div class="new-task-creator">
+                    <form action="" data-new-task-form>
+                        <input 
+                            type="text"
+                            class="new task"
+                            data-new-task-input
+                            placeholder="new task name"
+                            aria-label="new task name"
+                        >
+                        <button class="btn create" aria-label="create new task">+</button>
+                    </form>
+                </div>
+                <div class="delete-stuff">
+                    <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+                    <button class="btn delete" data-delete-project-button>Delete Project</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <template id="task-template">
+        <div class="task" >
+            <input type="checkbox">    
+            <label >
+                <span class="custom-checkbox">
+                </span>
+            </label>
+        </div>
+
+    </template>
+    
+</body>
+</html>
